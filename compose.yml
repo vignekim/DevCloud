@@ -1,0 +1,26 @@
+services:
+  server:
+    container_name: server
+    image: gradle:jdk19
+    restart: always
+    ports:
+      - 8080:8080
+      - 8761:8761
+    volumes:
+      - ./server:/workspace
+    environment:
+      - TZ=Asia/Seoul
+      - LC_ALL:en_US.UTF-8
+    command: sleep infinity
+  web:
+    container_name: web
+    image: nginx:latest
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./www:/usr/share/nginx/html:ro
+    environment:
+      - TZ=Asia/Seoul
+      - LC_ALL:en_US.UTF-8
+
