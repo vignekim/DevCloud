@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: folder-api
+          uri: lb://folder-api
+          predicates:
+            - Path=/api/**
+          filters:
+            - ApiFilter
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://server:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, refresh
+
+server:
+  port: 8080

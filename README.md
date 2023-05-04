@@ -54,3 +54,8 @@ DevContainer + Spring Cloud (Gateway + Config + Eureka)
 ----
 ### YouTube Link
 
+> * [1. Cloud 소개](https://youtu.be/mlJWoXJm034)
+> * [2. Gateway 설정하기](https://youtu.be/ZAsjRGkzbC8)
+> * [3. Eureka 설정하기](https://youtu.be/ZmNc4yZ9V90)
+> * [4. Config 설정하기 1부](https://youtu.be/65PwJMJbKYQ)
+> * [5. Config 설정하기 2부](https://youtu.be/8Y2OSavfizo)
