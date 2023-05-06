@@ -27,3 +27,7 @@ management:
 
 server:
   port: 0
+
+jwt:
+  key: c2hlbGxmb2xkZXIxMjM0NTY3ODlEZXZKV1QxMjM0NTY3ODk=
+  type: Bearer
