@@ -36,9 +36,13 @@ public class JwtComponent {
   @Autowired
   private ObjectMapper objectMapper;
 
+  @Autowired
+  private AuthMapper authMapper;
+
   public Map<String, Object> setJwtToken(String name) {
     Map<String, Object> resultMap = new HashMap<>();
-    User user = User.builder().name(name).build();
+    //User user = User.builder().name(name).build();
+    User user = authMapper.findById(name);
     String token = Jwts.builder()
       .setClaims(createClaims(user))
       .signWith(getSignKey(), SignatureAlgorithm.HS256)
